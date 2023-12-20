@@ -19,7 +19,8 @@ public class App
     {
     	
 		
-    	try (ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml")) {
+    	try (ClassPathXmlApplicationContext context = 
+    			new ClassPathXmlApplicationContext("applicationContext.xml")) {
 			CustomerMenager meneger = new CustomerMenager(context.getBean("odeme_yontemi",ICustomerMeneger.class));
 			meneger.odeme_yontemi();
 			meneger.faiz_orani();
