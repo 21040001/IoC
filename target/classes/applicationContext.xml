@@ -8,5 +8,8 @@
     http://www.springframework.org/schema/context/spring-context.xsd">
 
 	<bean id="odeme_yontemi" class="com.ETicaret.IoC.PayPalDal"></bean>
+	<bean id="service" class="com.ETicaret.IoC.CustomerMenager">
+	<constructor-arg ref="odeme_yontemi"></constructor-arg>
+	</bean>
 
 </beans>

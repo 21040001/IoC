@@ -20,9 +20,12 @@ public class App
     	
 		
     	try (ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml")) {
-			CustomerMenager meneger = new CustomerMenager(context.getBean("odeme_yontemi",ICustomerMeneger.class));
+    		
+    		ICustomerService meneger= context.getBean("service",ICustomerService.class);
+			
 			meneger.odeme_yontemi();
 			meneger.faiz_orani();
+			
 		} catch (BeansException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

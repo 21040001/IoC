@@ -1,7 +1,7 @@
 package com.ETicaret.IoC;
 
 
-public class CustomerMenager {
+public class CustomerMenager implements ICustomerService {
 
 	private ICustomerMeneger iCustomerMeneger;
 
