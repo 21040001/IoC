@@ -1,7 +1,7 @@
 package com.ETicaret.IoC;
 
-
-
+import org.springframework.beans.BeansException;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 /**
 Problem: Bir e-ticaret uygulaması geliştiriyorsunuz ve 
@@ -19,10 +19,14 @@ public class App
     {
     	
 		
-			CustomerMenager meneger = new CustomerMenager(new PayPalDal());
+    	try (ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml")) {
+			CustomerMenager meneger = new CustomerMenager(context.getBean("odeme_yontemi",ICustomerMeneger.class));
 			meneger.odeme_yontemi();
-   
 			meneger.faiz_orani();
+		} catch (BeansException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		
     
      
