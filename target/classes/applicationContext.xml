@@ -9,7 +9,9 @@
 
 	<bean id="odeme_yontemi" class="com.ETicaret.IoC.PayPalDal"></bean>
 	<bean id="service" class="com.ETicaret.IoC.CustomerMenager">
-	<constructor-arg ref="odeme_yontemi"></constructor-arg>
+<!--  	<constructor-arg ref="odeme_yontemi"></constructor-arg> -->
+	<property name="iCustomerMeneger" ref="odeme_yontemi"></property>
+	
 	</bean>
 
 </beans>
