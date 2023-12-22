@@ -6,14 +6,16 @@
     http://www.springframework.org/schema/beans/spring-beans.xsd
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
+    
+    <context:property-placeholder location="*.properties"/>
 
 	<bean id="odeme_yontemi" class="com.ETicaret.IoC.PayPalDal">
 		<property name="faiz" value="10%"></property>
 	</bean>
-	<bean id="service" class="com.ETicaret.IoC.CustomerMenager">
-<!--  	<constructor-arg ref="odeme_yontemi"></constructor-arg> -->
-	<property name="iCustomerMeneger" ref="odeme_yontemi"></property>
 	
+	
+	<bean id="service" class="com.ETicaret.IoC.CustomerMenager">
+	<property name="iCustomerMeneger" ref="odeme_yontemi"></property>
 	</bean>
 
 </beans>
