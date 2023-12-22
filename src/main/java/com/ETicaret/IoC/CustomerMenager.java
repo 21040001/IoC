@@ -2,6 +2,8 @@ package com.ETicaret.IoC;
 
 
 public class CustomerMenager implements ICustomerService {
+	
+	String faiz;
 
 	private ICustomerMeneger iCustomerMeneger;
 

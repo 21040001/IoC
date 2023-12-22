@@ -1,6 +1,18 @@
 package com.ETicaret.IoC;
 
 public class PayPalDal  implements ICustomerMeneger{
+	
+	String faiz;
+	
+	
+
+	public String getFaiz() {
+		return faiz;
+	}
+
+	public void setFaiz(String faiz) {
+		this.faiz = faiz;
+	}
 
 	@Override
 	public void add() {
@@ -9,7 +21,7 @@ public class PayPalDal  implements ICustomerMeneger{
 
 	@Override
 	public void faiz() {
-		System.out.println("paypal faiz miktari 10%");
+		System.out.println("paypal faiz miktari "+faiz);
 		
 	}
 
