@@ -10,7 +10,7 @@
     <context:property-placeholder location="*.properties"/>
 
 	<bean id="odeme_yontemi" class="com.ETicaret.IoC.PayPalDal">
-		<property name="faiz" value="10%"></property>
+		<property name="faiz" value="${odeme_faiz}"></property>
 	</bean>
 	
 	
